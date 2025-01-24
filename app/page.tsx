@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
+import SneakPeak from "./components/SneakPeak";
 
 export default function Home() {
   return (
@@ -7,6 +8,7 @@ export default function Home() {
       <Navbar />
       <section>
       <LandingPage />
+      <SneakPeak />
       </section>
     </div>
   );
