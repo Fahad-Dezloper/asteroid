@@ -5,9 +5,13 @@ import { Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-export default function CopyCommand() {
+export default function CopyCommand({className, command}) {
   const [copied, setCopied] = useState(false)
-  const command = "npx degit xyflow/vite-react-flow-template app-name"
+  if(command){
+      command = command
+  }else{
+      command = "npx degit xyflow/vite-react-flow-template app-name"
+  }
 
   const copyToClipboard = async () => {
     try {
