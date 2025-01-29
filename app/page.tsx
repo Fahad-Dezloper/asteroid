@@ -15,13 +15,13 @@ export default function Home() {
       <section>
       <SneakPeak />
       </section>
-      <section className="w-full h-screen">
+      <section className="w-full">
       <Features />
       </section>
-      <section className="p-2 bg-gray-100 rounded-xl">
+      <section className="p-2 mt-20 bg-gray-100 rounded-2xl">
       <Pricing />
       </section>
-      <section>
+      <section className="mt-12">
       <Automation />
       </section>
       <section>

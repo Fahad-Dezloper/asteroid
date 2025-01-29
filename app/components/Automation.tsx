@@ -19,17 +19,18 @@ const Automation = () => {
   };
 
   return (
-    <div className="h-[40rem] flex flex-col gap-4 justify-center items-center px-4">
-      <h2 className="font-primary text-xl text-center sm:text-5xl dark:text-white text-white">
-      Need a custom browser automation?
+    <div className="h-[35rem] flex flex-col gap-4 relative justify-end pb-40 items-center px-4">
+      <h1 className='text-[34vw] top-0 leading-none absolute font-semibold font-primary text-white/20'>Build</h1>
+      <h2 className="font-body text-xl text-center backdrop-blur-lg sm:text-5xl dark:text-white text-white">
+      Smarter, Safer AI
       </h2>
       <div className='flex flex-col gap-2 w-full items-center'>
+        {/* <span className='text-gray-500 text-base font-body p-2 bg-gray-200/20 rounded-xl'>We quickly prototype, build, and host custom browser automations for your needs.</span> */}
       <PlaceholdersAndVanishInput
         placeholders={placeholders}
         onChange={handleChange}
         onSubmit={onSubmit}
       />
-      <span className='text-xs font-body text-gray-200 mt-2'>We can rapidly prototype, build and host custom browser automations for your specific use case.</span>
     </div>
     </div>
   )

@@ -4,109 +4,63 @@ import React from "react";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
 import { Bell, BookMarked, Brain, CheckCircleIcon, CodeIcon, FileSearch2, Hammer, LucideBoxes, RefreshCcw, Server, Shield, UserCircleIcon, Video } from "lucide-react";
+import FeatureCard from "@/components/FeatureCard";
  
 const content = [
-  {
-    title: "Two line integration",
-    subheading: "Deploy automation in minutes, not weeks",
-    description: [
-        {icon: <CodeIcon size={18} />, description: "Launch powerful browser automations with a single line of code"},
-        {icon: <FileSearch2 size={18} />, description: "No complex configuration or trawling through API docs"},
-        {icon: <Hammer size={18} />, description: "No manual maintenance of automation scripts"}
-    ],
-    content: (
-    //   add copy command for command of python
-    <div className="h-full w-full object-cover flex items-center justify-center text-white">
-        <img
-          src="https://i.imghippo.com/files/bhzJ6050XqU.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="carbox image"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Human in the loop",
-    description: [
-      {icon: <Bell size={18} />, description: "Get instant alerts for uncertain situations"},
-      {icon: <CheckCircleIcon size={18} />, description: "Review and approve agent actions in real-time"},
-      {icon: <Video size={18} />, description: "Access full session recordings for oversight"}],
-    content: (
-      <div className="h-full w-full object-cover flex items-center justify-center text-white">
-        <img
-          src="https://asteroid.ai/features/inlinereview.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Autonomous Learning",
-    subheading: "Complex workflows, automated without programming",
-    description:[
-      {icon: <Brain size={18} />, description: "Self-learns and replicates complex workflows"},
-      {icon: <RefreshCcw size={18} />, description: "Adapts automatically to website changes"},
-      {icon: <UserCircleIcon size={18} />, description: "Improves from every human interaction"}], 
-      content: (
-        <div className="h-full w-full object-cover flex items-center justify-center text-white">
-        <img
-          src="https://asteroid.ai/features/rundetails.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Intelligent Guardrails",
-    subheading: "Prevent costly mistakes on mission critical workflows",
-    description: [
-      {icon: <Shield size={18} />, description: "Set and enforce safety boundaries in real-time"},
-      {icon: <BookMarked size={18} />, description: "Use pre-built rules for popular websites"}],  
-    content: (
-      <div className="h-full w-full object-cover flex items-center justify-center text-white">
-        <img
-          src="https://asteroid.ai/features/supervisors.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
-  {
-    title: "Massively scalable",
-    subheading: "Scale massively, outsource the headache",
-    description: [
-      {icon: <LucideBoxes size={18} />, description: "Run 1000+ concurrent sessions on demand"},
-      {icon: <Server size={18} />, description: "No browser or server management needed"}],  
-    content: (
-      <div className="h-full w-full object-cover flex items-center justify-center text-white">
-        <img
-          src="https://asteroid.ai/features/runs.png"
-          width={300}
-          height={300}
-          className="h-full w-full object-cover"
-          alt="linear board demo"
-        />
-      </div>
-    ),
-  },
+{
+  num: 1,
+  heading: "Seamless Integration – Deploy in Minutes, Not Weeks",
+  image: "https://i.imghippo.com/files/bhzJ6050XqU.png",
+  tags: ["Effortless Setup", "Zero Config Hassle", "No Manual Maintenance"],
+  des: "Skip the complexity and get automation running in minutes—no coding, no maintenance, no wasted time."
+},
+{
+  num: 2,
+  heading: "Stay in Control with Human Oversight",
+  image: "https://asteroid.ai/features/inlinereview.png",
+  tags: ["🔔 Instant Alerts", "Real-Time Decision Making", "Complete Transparency"],
+  des: "Automation runs on its own, but you stay in charge with real-time alerts and approvals."
+},
+{
+  num: 3,
+  heading: "AI That Learns and Adapts Automatically",
+  image: "https://asteroid.ai/features/rundetails.png",
+  tags: ["Self-Learning Automation", "Built for Change", "Improves Over Time"],
+  des: "Automation that doesn’t just follow rules—it learns, improves, and adapts to changing workflows."
+},
+{
+  num: 4,
+  heading: "Built-in Safety Nets to Prevent Costly Mistakes",
+  image: "https://asteroid.ai/features/supervisors.png",
+  tags: ["Set Smart Boundaries", "Pre-Built Protections", "Error Prevention"],
+  des: "Reduce risks with automated safeguards that prevent errors before they happen, ensuring accuracy."
+},
+{
+  num: 5,
+  heading: "Scale Without Limits, No Infrastructure Needed",
+  image: "https://asteroid.ai/features/runs.png",
+  tags: ["1000+ Concurrent Sessions", "Fully Managed", "Effortless Scaling"],
+  des: "Run thousands of automated workflows simultaneously without worrying about infrastructure or performance issues."
+}
 ];
 
 export function Features() {
     return (
-      <div className="mt-8 py-8 flex flex-col w-full items-center">
-        <h1 className="text-3xl font-semibold text-white mb-6">Its as easy as it looks</h1>
-        <StickyScroll content={content} contentClassName={undefined} />
+      <div className="mt-8 py-8 flex flex-col gap-24 w-full h-fit px-28">
+        <div className="flex flex-col">
+        <h1 className="text-xl text-primary font-body">Features</h1>
+        <h1 className="text-[4vw] font-semibold mb-6 text-white font-primary"><span className="">Smarter</span> Automation, Zero Headaches <span className="text-primary font-black">-</span> We Filter the <span className="text-white/20 font-bold">Noise</span></h1>
+        </div>
+        <div className="w-full h-fit flex flex-col gap-36">
+        {content.map((item, i) => (
+          <FeatureCard key={i} num={item.num} heading={item.heading} image={item.image} tags={item.tags} des={item.des} />
+        ))}
+        </div>
       </div>
     );
   }
+
+
+
+
+  {/* <StickyScroll content={content} contentClassName={undefined} /> */}

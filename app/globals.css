@@ -73,7 +73,7 @@ body {
 
 
 body{
-  background-color: #020617;
+  background-color: black;
 }
 
 .scrolll{
@@ -87,4 +87,14 @@ body{
 .scrolll {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
+}
+
+#vidcrsr {
+  pointer-events: none;
+  background-color: rgba(255, 255, 255, 0.884); /* Ensures the custom cursor doesn't block interactions */
+  transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.sticky {
+  transition: width 0.4s ease-in-out, padding 0.4s ease-in-out;
 }
