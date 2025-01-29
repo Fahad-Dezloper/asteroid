@@ -1,9 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React from "react";
-import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import Image from "next/image";
-import { Bell, BookMarked, Brain, CheckCircleIcon, CodeIcon, FileSearch2, Hammer, LucideBoxes, RefreshCcw, Server, Shield, UserCircleIcon, Video } from "lucide-react";
 import FeatureCard from "@/components/FeatureCard";
  
 const content = [

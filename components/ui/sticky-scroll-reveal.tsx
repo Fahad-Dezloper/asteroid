@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
@@ -7,7 +9,7 @@ import { cn } from "@/lib/utils";
 export const StickyScroll = ({
   content,
   contentClassName,
-}) => {
+}:any) => {
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
@@ -19,9 +21,9 @@ export const StickyScroll = ({
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    const cardsBreakpoints = content.map((_, index) => index / cardLength);
+    const cardsBreakpoints = content.map((_: any, index: number) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
-      (acc, breakpoint, index) => {
+      (acc: string | number, breakpoint: number, index: any) => {
         const distance = Math.abs(latest - breakpoint);
         if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
           return index;
@@ -63,6 +65,7 @@ export const StickyScroll = ({
 
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
+          {/* @ts-ignore */}
           {content.map((item, index) => (
             <div key={item.title + index} className="my-20">
               <div className="flex flex-col gap-2">
@@ -89,7 +92,7 @@ export const StickyScroll = ({
                 }}
                 className="flex flex-col gap-4 border p-3 rounded-xl bg-gray-200 text-black text-sm max-w-lg mt-10"
               >
-                {item.description.map((item, index) => (
+                {item.description.map((item: { icon: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; description: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined; }, index: React.Key | null | undefined) => (
                   <div key={index} className="flex items-center gap-2">
                     {item.icon}
                     <p>{item.description}</p>

@@ -11,7 +11,7 @@ const BookNow = () => {
       }, [])
   return (
     <div className='w-full h-full flex flex-col items-center gap-12'>
-      <h1 className='text-6xl text-white font-semibold font-body'>We'd love to help.</h1>
+      <h1 className='text-6xl text-white font-semibold font-body'>We&apos;d love to help.</h1>
         <Cal namespace="30min"
 	  calLink="fahad-n8uphu/30min"
 	  style={{width:"100%",height:"100%",overflow:"scroll"}}

@@ -5,7 +5,7 @@ import { Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-export default function CopyCommand({className, command}) {
+export default function CopyCommand({className, command}:any) {
   const [copied, setCopied] = useState(false)
   if(command){
       command = command

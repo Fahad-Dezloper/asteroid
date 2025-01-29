@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 "use client"
 import { Pause, Play } from "lucide-react";
 import React, { useRef, useState } from "react";
@@ -11,20 +12,25 @@ const YouTubePlayer = () => {
   const containerRef = useRef(null);
   const videoRef = useRef(null);
   
-  function values(x, y){
+  function values(x: number, y: number){
     if (containerRef.current) {
+      // @ts-ignore
       const rect = containerRef.current.getBoundingClientRect();
       setCursorX(x - rect.left);
       setCursorY(y - rect.top);
     }
   }
 
+
   function togglePlayPause() {
     if (videoRef.current) {
+      // @ts-ignore
       if (videoRef.current.paused) {
+        // @ts-ignore
         videoRef.current.play();
         setIsPlaying(true);
       } else {
+        // @ts-ignore
         videoRef.current.pause();
         setIsPlaying(false);
       }

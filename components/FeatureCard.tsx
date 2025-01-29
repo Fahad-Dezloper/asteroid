@@ -1,6 +1,8 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 
-const FeatureCard = ({num, heading, image, tags, des}) => {
+const FeatureCard = ({num, heading, image, tags, des}:any) => {
   return (
     <div className={`text-white flex items-start ${num % 2 == 0 ? "flex-row-reverse" : ""} gap-32 justify-center`}>
             <div className="flex flex-col gap-6">
@@ -9,7 +11,7 @@ const FeatureCard = ({num, heading, image, tags, des}) => {
               <h1 className="text-xl text-white font-semibold font-body">{heading}</h1>
               
               <div className='flex gap-2'>
-              {tags.map((item, i) => (
+              {tags.map((item: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined, i: React.Key | null | undefined) => (
                 <div key={i} className='text-xs font-semibold py-2 px-3 bg-blue-200/80 text-gray-800 rounded-lg'>{item}</div>
               ))}
               </div>
@@ -21,9 +23,11 @@ const FeatureCard = ({num, heading, image, tags, des}) => {
               <div className="w-[28rem] h-[24rem] relative backdrop-blur-xl hover:shadow-lg p-6 rounded-xl">
                   <div className="w-full h-full bg-primary/40 rounded-3xl -rotate-12 scale-110 absolute top-0 left-0 z-[30]"></div>
                   <div className="w-full h-full bg-blue-200/50 rounded-3xl rotate-12 scale-110 absolute top-0 left-0 z-[30]"></div>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img 
                       src={image} 
                       className="w-full h-full object-contain relative z-[50] scale-110 rounded-xl" 
+                      alt='featuredImage'
                   />
               </div>
 
