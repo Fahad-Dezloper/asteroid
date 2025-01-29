@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: "https://asteroid.ai/logo-128-nobg.png",
         width: 128,
         height: 128,
-        alt: "Asteroid Ai Logo",
+        alt: "Asteroid Ai",
       },
     ],
   },
