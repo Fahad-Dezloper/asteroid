@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { useState } from "react"
@@ -5,7 +6,8 @@ import { Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
-export default function CopyCommand({className, command}:any) {
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+export default function CopyCommand({command}:any) {
   const [copied, setCopied] = useState(false)
   if(command){
       command = command
